@@ -1,5 +1,5 @@
 #{ lib, stdenv, fetchFromGitHub, nodejs, npm, git, python3, lightdm, gobject-introspection, cairo, xorg }:
-{ lib, stdenv, nodejs, npm, python3, src }:
+{ lib, stdenv, nodejs_22, python3, gobject-introspection, cairo, src }:
 
 stdenv.mkDerivation rec {
   pname = "nody-greeter";
@@ -8,7 +8,7 @@ stdenv.mkDerivation rec {
   src = ./.;
   #nativeBuildInputs = [ nodejs npm git python3 ];
   #buildInputs = [ lightdm gobject-introspection cairo xsetroot ];
-  nativeBuildInputs = [ nodejs npm python3 ];
+  nativeBuildInputs = [ nodejs_22 python3 gobject-introspection cairo ];
 
 
   #patches = [ ./install.patch ];
