@@ -8,7 +8,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        brrtfetch = pkgs.callPackage ./package.nix {};
+        nody-greeter = pkgs.callPackage ./package.nix {};
       in {
         packages = {
           default = nody-greeter;
